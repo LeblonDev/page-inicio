@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Inicio App Leblon</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Comienza a gestionar tu negocio</h1>
+      <p>Observa como se facilita la administracion de tus clientes, de una manera simple e intuitiva. 
+        Favoreciendo el monitore de sus progresos.</p>
+    </header>
+    <div class="flex-right-container">
+      <section class="content-sesion">
+        <div class="trial-info-container">
+          <p>
+            <strong>Inicia Sesion</strong> con tu nombre de usuario.
+          </p>
+        </div>
+        <form action="#" class="form">
+  
+          <div class="input-container">
+            <img src="./images/icon-error.svg" alt="error-msg" class="err-icon hidden">
+            <input class='input' type="text" id='first-name' name='acountName' placeholder='Cuenta'>
+            <span class="err-msg  err-first-name"></span>
+          </div>
+            
+          <div class="input-container">
+            <img src="./images/icon-error.svg" alt="error-msg" class="err-icon hidden">
+            <input class='input' type="password" id='password' name='pass' placeholder='Password'>
+            <span class="err-msg "></span>
+          </div>
+          <input type="submit" value="COMPROBAR USUARIO">
+  
+          <p class="terms-and-cons">Recuerda no compartir tu contraseña con otros miembros del <a
+              href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank">Team Leblon</a></p>
+        </form>
+      </section>
+      
+      <div class=" success-message-container hidden ">
+        <h2>Success!</h2>
+        <p class="successMsg"> Acceso a la plataforma permitido
+        </p>
+        <a class="link-to-site" href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank">INGRESAR</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="javascript.js"></script>
+</body>
+
+</html>

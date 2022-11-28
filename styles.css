@@ -1,0 +1,240 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* colors */
+:root {
+  --background: #CC732D;
+  --text: white;
+  --trialBox: #634BCC;
+  --formFocus: #3d3b48;
+  --callToAction: #38cc8b;
+}
+/* general */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  background-image: url('./images/prueba-mobile.png'),
+    linear-gradient(var(--background), var(--background));
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+/* header */
+h1,
+p {
+  text-align: center;
+  color: var(--text);
+}
+h1 {
+  margin-top: 5.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+header > p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  margin-bottom: 4rem;
+}
+.trial-info-container,
+.success-message-container {
+  width: 100%;
+  background-color: var(--trialBox);
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+}
+.trial-info-container p,
+.successMsg {
+  padding: 1.125rem 4.1875rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+/* form */
+.form {
+  width: 100%;
+  padding: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+  margin-bottom: 4.25rem;
+}
+form input {
+  width: 100%;
+  height: 56px;
+  border-radius: 5px;
+  border: 1px solid #dedede;
+  /* padding-left: 1rem; */
+  text-indent: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #3d3b48;
+  transition: all 0.3s ease-in-out;
+}
+form input:focus {
+  outline: none;
+  border: 1px solid var(--trialBox);
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-container .err-icon {
+  height: 24px;
+  width: 24px;
+  display: block;
+  position: absolute;
+  right: 10%;
+  bottom: 50%;
+}
+.err-msg {
+  display: block;
+  text-align: right;
+  font-size: 0.6875rem;
+  color: red;
+}
+
+form input[type='submit'],
+.link-to-site {
+  background-color: var(--callToAction);
+  color: white;
+  text-indent: 0;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  border-radius: 5px;
+  border: none;
+  padding: 0.9375rem 2.75rem;
+  transition: all 0.3s ease-in-out;
+}
+form input[type='submit']:hover,
+.link-to-site:hover {
+  background-color: #77e2b3;
+  cursor: pointer;
+}
+form input[type='submit']:active,
+.link-to-site:active {
+  background-color: #77e2b3;
+  box-shadow: none;
+}
+
+.terms-and-cons {
+  text-align: center;
+  width: 80%;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 21px;
+  color: #bab7d4;
+  margin: 0 auto;
+}
+.terms-and-cons > a {
+  text-decoration: none;
+  color: var(--background);
+}
+
+/* form toggle styles */
+.err-border {
+  border: 2px solid red;
+}
+/* hidden  */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* form submitted modal */
+.success-message-container {
+  text-align: center;
+  padding: 1.5rem;
+  margin-bottom: 4rem;
+}
+.success-message-container h2 {
+  color: var(--text);
+  font-size: 3rem;
+}
+.success-message-container > p {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+.success-message-container .link-to-site {
+  display: block;
+  text-decoration: none;
+  font-size: 1rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  body {
+    background-image: url('./images/prueba.png'),
+      linear-gradient(var(--background), var(--background));
+  }
+
+  main {
+    max-width: 1440px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 2.8125rem;
+  }
+  header {
+    flex-basis: 525px;
+  }
+  .form {
+    margin-bottom: 0;
+    padding: 2.5rem;
+  }
+  .flex-right-container {
+    flex-basis: 540px;
+  }
+  h1 {
+    font-size: 3.125rem;
+    line-height: 3.4375rem;
+    text-align: left;
+    margin-top: 0;
+    /* width: 85%; */
+  }
+  header > p {
+    line-height: 26px;
+    text-align: left;
+  }
+  .trial-info-container p {
+    padding: 1.125rem 0.5rem;
+  }
+  /* form submission */
+  .success-message-container {
+    /* min-height: 350px; */
+    padding: 2rem;
+  }
+  .success-message-container h2 {
+    color: var(--text);
+    font-size: 4rem;
+  }
+  .success-message-container p {
+    font-size: 1.5rem;
+  }
+  .success-message-container .link-to-site {
+    font-size: 1.5rem;
+  }
+}
